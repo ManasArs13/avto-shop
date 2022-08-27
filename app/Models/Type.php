@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Type extends Model
 {
     use HasFactory;
+
+    public function Product () {
+
+        return $this->belongsToMany(Product::class);
+
+    }
+
+
 }

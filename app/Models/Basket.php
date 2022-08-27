@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Basket extends Model
 {
     use HasFactory;
+
+    public function User() {
+
+        return $this->hasOne(User::class);
+
+    }
 }

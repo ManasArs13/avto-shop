@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApiCategoryController;
 use App\Http\Controllers\ApiProductController;
 use App\Http\Controllers\ApiTypeController;
+use App\Http\Controllers\ApiAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post('/register', [ApiAuthController::class, 'register']);
+Route::post('/login', [ApiAuthController::class, 'login']);
+/* Доделать!!!
+Route::post('/logout', [ApiAuthController::class, 'logout']);
+*/
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

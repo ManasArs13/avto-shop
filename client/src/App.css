@@ -9,7 +9,9 @@ a:hover {
 }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 25%);
+  /* box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 25%); */
+  box-shadow: 0 0 0 0.25rem rgb(207 207 207);
+  border-color: #ffffff;
 }
 
 .min-vh-80 {
@@ -34,8 +36,23 @@ border-top: 1px solid rgb(0, 0, 0); */
 
 #header {
   /* background: linear-gradient(181deg, #c1c1c1, #f9c7c7); */
-  background: linear-gradient(358deg, #b1afaf, #fdf0f0);
+ /*  background: linear-gradient(358deg, #b1afaf, #fdf0f0); */
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  box-shadow: 0 0 10px rgb(179 179 179 / 50%);
 }
+
+
+.row > * {
+
+  padding-right: calc(var(--bs-gutter-x) * 0.3);
+  padding-left: calc(var(--bs-gutter-x) * 0.3);
+  
+}
+
+
+
+
 
 #footer {
   background: linear-gradient(0deg, #3c3c3c, #000000);

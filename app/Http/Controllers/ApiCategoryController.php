@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Category;
-//use App\Models\Product;
+use App\Models\Product;
 use App\Models\Type;
 
 class ApiCategoryController extends Controller
@@ -52,10 +52,15 @@ class ApiCategoryController extends Controller
      */
     public function show($id)
     {
-        $category = Category::find($id);
-        $products = $category->Products;
+        if ($id == 'all') {
+            $products = Product::all();
+            return response()->json(['ВСЕ ПРОДУКТЫ', 'all', $products]);
+        } else {
+            $category = Category::find($id);
+            $products = $category->Products;
         
-        return response()->json([$category->name, $products]);
+            return response()->json([$category->name, $category->id, $products]);
+        }
     }
 
     public function showByType($id, $type)

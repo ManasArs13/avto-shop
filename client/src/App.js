@@ -15,20 +15,25 @@ import Footer from './layouts/Footer';
 import Home from './pages/Home';
 import Category from './pages/Category';
 import Product from './pages/Product';
-
+import Liked from './pages/Liked';
+import Basket from './pages/Basket';
+import Register from './pages/Register';
+import Login from './pages/Login';
 //import Categories from './pages/Home';
 
 
 function App() {
   return (
-    <BrowserRouter>
-        
-        <Header />
-      
+    <BrowserRouter>       
+        <Header />      
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/category/:id" element={<Category />}/>
           <Route exact path="/product/:id" element={<Product />} />
+          <Route exact path="/liked" element={<Liked/>} />
+          <Route exact path="/basket" element={<Basket/>} />
+          <Route exact path="/register" element={<Register/>} />
+          <Route exact path="/login" element={<Login/>} />
           <Route path="*" element={<Home />} />
         </Routes>
 

@@ -1,11 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
-import { getProductsWhereCategoryId } from '../store/actions/productsActions.js'
+import { Link } from "react-router-dom";
+//import { useDispatch } from 'react-redux';
+//import { getProductsWhereCategoryId } from '../store/actions/productsActions.js'
 
 export default function CategoryBurron (props) {
 
     const category = props.category;
-    const dispatch = useDispatch()
+   // const dispatch = useDispatch()
 
     let name = 'загрузка'
     let id = ''
@@ -16,7 +17,9 @@ export default function CategoryBurron (props) {
     }
 
     return (
-        <button type="button" onClick={() => getProductsWhereCategoryId(dispatch, id)} className="btn btn-outline-dark">{name}</button>
+        <Link to={'/category/' + id}>
+        <button type="button" className="btn btn-outline-dark">{name}</button>
+        </Link>
     )
 
 }

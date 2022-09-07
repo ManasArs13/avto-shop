@@ -8,7 +8,7 @@ export const getProducts = (dispatch) => {
     export const getProductsSucces = (response) => {
         return {
             type: 'GET_PRODUCTS_ALL',
-            products: response,
+            products: ['ВСЕ ТОВАРЫ', 'all', response]
         };
     }
 
@@ -19,9 +19,9 @@ export const getProductsWhereCategoryId = (dispatch, id) => {
         .catch(err => console.log(err))
 }
     export const getProductsWhereCategoryIdSucces = (response) => {
-       console.log(response)
+     
         return {
             type: 'GET_PRODUCTS_CATEGORY_ID',
-            products: response[1],
+            products: response,
         };
     }

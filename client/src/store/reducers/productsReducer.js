@@ -6,7 +6,8 @@ export default function productsReducer(state = initialState, action) {
             return action.products;
         case 'GET_PRODUCTS_CATEGORY_ID':
             return action.products;
-
+        case 'SET_PRODUCTS_NULL':
+            return action.products;
 
         default:
             return state;

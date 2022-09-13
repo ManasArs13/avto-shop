@@ -13,16 +13,12 @@ import CategoryBurron from "../components/CategoryButton";
 export default function Category() {
 
     const param = useParams();
-    //console.log(param)
     
     const dispatch = useDispatch()
 
     const products = useSelector((state) => state.products)
     const categories = useSelector((state)=> state.categories)
-    const title = useSelector((state)=>state)
-   // console.log(!(param.id == products[1]))
-    console.log(title)
-  //  console.log(products[1])
+  
     let isProducts = <ProductCard product={null}/>
     let isCategories = <CategoryBurron category={null}/>
     let isTitle = 'ЗАГРУЗКА'

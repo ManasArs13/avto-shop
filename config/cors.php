@@ -15,20 +15,31 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
-
+    //'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => [
+      'api/*',
+      'login',
+      'logout',
+      'register',
+      'user/password',
+      'forgot-password',
+      'reset-password',
+      'sanctum/csrf-cookie',
+      'user/profile-information',
+      'email/verification-notification',
+    ],
     'allowed_methods' => ['*'],
-
+ //   'allowed_origins' => ['http://avto-shop.ru', 'http://localhost:3000'],
     'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
-
+  //  'allowed_headers' => ['http://avto-shop.ru', 'http://localhost:3000'],
     'exposed_headers' => [],
 
     'max_age' => 0,
-
-    'supports_credentials' => false,
+//'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
